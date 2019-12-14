@@ -10,10 +10,10 @@ class Test(MycroftSkill):
         requests.put('http://192.168.0.106/1', data="{\"on\":true}")
         self.speak_dialog('on')
 
-    @intent_file_handler('test.intent')
+    @intent_file_handler('off.intent')
     def handle_off(self, message):
         requests.put('http://192.168.0.106/0', data="{\"on\":false}")
-        self.speak_dialog('test')
+        self.speak_dialog('off')
 
 
 def create_skill():
