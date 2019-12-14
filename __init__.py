@@ -7,12 +7,12 @@ class Test(MycroftSkill):
 
     @intent_file_handler('on.intent')
     def handle_on(self, message):
-        requests.put('http://192.168.0.106/1', data="{\"on\":true}")
+        requests.put('http://192.168.0.199/1', data="{\"on\":true}")
         self.speak_dialog('on')
 
     @intent_file_handler('off.intent')
     def handle_off(self, message):
-        requests.put('http://192.168.0.106/0', data="{\"on\":false}")
+        requests.put('http://192.168.0.199/0', data="{\"on\":false}")
         self.speak_dialog('off')
 
 
